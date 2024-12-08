@@ -1,6 +1,6 @@
 // Importamos React y el hook useState para manejar el estado del menú móvil
 // También importamos el logo desde los assets
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 
@@ -8,11 +8,12 @@ import { Link } from "react-router-dom";
 // Array de enlaces principales de la barra de navegación
 // Cada objeto tiene un id único, título y enlace
 const navbarLinks = [
-  { id: 1, title: "About", link: "/about" },
-  { id: 2, title: "Servicios", link: "#" },
-  { id: 3, title: "Productos", link: "#" },
-  { id: 4, title: "Catalogo Web", link: "#" },
-  { id: 5, title: "Contactanos", link: "#" },
+  { id: 1, title: "Quienes Somos", link: "/quienes-somos" },
+  { id: 2, title: "Servicios", link: "/servicios" },
+  { id: 3, title: "Productos", link: "/productos" },
+  { id: 4, title: "Catálogo Web", link: "/catalogo-web" },
+  { id: 5, title: "Nuestros Trabajos", link: "/nuestros-trabajos" },
+  { id: 6, title: "Contáctanos", link: "contactanos" },
 ];
 
 // Array de redes sociales con íconos y efectos visuales para hover
@@ -20,7 +21,7 @@ const redesSociales = [
   {
     id: 1,
     title: "WhatsApp",
-    link: "#",
+    link: "https://wa.me/+5917561315?text=Que desea joven?",
     icon: <i className="bi bi-whatsapp text-xl" />, // Ícono de WhatsApp
     hoverClass:
       "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]", // Efecto de hover: color verde y sombra neón

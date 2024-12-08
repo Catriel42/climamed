@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const QuienesSomos = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <h1 className="text-4xl font-bold text-gray-800">Acerca de Nosotros</h1>
@@ -11,4 +11,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default QuienesSomos;
