@@ -1,54 +1,52 @@
-// Importamos React y el hook useState para manejar el estado del menú móvil
-// También importamos el logo desde los assets
+// Importamos React, el hook useState, el logo, y el componente Link de react-router-dom
 import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 
-
 // Array de enlaces principales de la barra de navegación
-// Cada objeto tiene un id único, título y enlace
 const navbarLinks = [
   { id: 1, title: "Quienes Somos", link: "/quienes-somos" },
   { id: 2, title: "Servicios", link: "/servicios" },
   { id: 3, title: "Productos", link: "/productos" },
   { id: 4, title: "Catálogo Web", link: "/catalogo-web" },
   { id: 5, title: "Nuestros Trabajos", link: "/nuestros-trabajos" },
-  { id: 6, title: "Contáctanos", link: "contactanos" },
+  { id: 6, title: "Contáctanos", link: "/contactanos" },
 ];
 
-// Array de redes sociales con íconos y efectos visuales para hover
+// Array de redes sociales con sus íconos, enlaces y efectos visuales
 const redesSociales = [
   {
-    id: 1,
-    title: "WhatsApp",
-    link: "https://wa.me/+5917561315?text=Que desea joven?",
+    id: 1, // Identificador único
+    title: "WhatsApp", // Título del ícono
+    link: "https://wa.me/59175961315?text=Que%20quiere%20joven%3F%20Estoy%20codeando",
     icon: <i className="bi bi-whatsapp text-xl" />, // Ícono de WhatsApp
     hoverClass:
-      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]", // Efecto de hover: color verde y sombra neón
+      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]", // Efecto de hover
+    target: "_blank", // Abre el enlace en una nueva pestaña
+    rel: "noopener noreferrer", // Agrega seguridad al enlace
   },
   {
     id: 2,
     title: "Instagram",
-    link: "#",
+    link: "#", // Enlace de Instagram
     icon: <i className="bi bi-instagram text-xl" />, // Ícono de Instagram
     hoverClass:
-      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover: color rosa y sombra neón
+      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover
   },
 ];
 
-// Componente Navbar principal
+// Componente principal Navbar
 const Navbar = () => {
   // Estado para manejar si el menú móvil está abierto o cerrado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    // Contenedor principal de la barra de navegación
-    // Estilo: fija el navbar arriba, añade un degradado de color y una sombra
+    // Contenedor principal del Navbar
     <nav className="fixed w-full top-0 z-50 bg-cyan-600/80 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto">
-        {/* Contenedor flexible para el logo, enlaces y menú móvil */}
+        {/* Contenedor para el logo, los enlaces principales y el menú móvil */}
         <div className="flex justify-between items-center sm:px-12 sm:py-4 px-4 py-3">
-          {/* Logo del sitio con un efecto de hover */}
+          {/* Logo del sitio */}
           <div className="flex-shrink-0">
             <Link to="/">
               <img
@@ -67,7 +65,6 @@ const Navbar = () => {
                 <li key={link.id}>
                   <a
                     href={link.link}
-                    // Estilo de texto con animaciones y efectos al pasar el cursor
                     className="text-white relative font-medium text-sm uppercase tracking-wide py-2 px-1
                     hover:text-cyan-300 transition-all duration-300
                     hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]
@@ -86,12 +83,12 @@ const Navbar = () => {
           {/* Íconos de redes sociales para pantallas grandes */}
           <div className="hidden md:block">
             <ul className="flex space-x-6">
-              {/* Renderizamos cada ícono del array redesSociales */}
               {redesSociales.map((social) => (
                 <li key={social.id}>
                   <a
-                    href={social.link}
-                    // Aplicamos las clases dinámicas para efectos hover
+                    href={social.link} // Enlace de la red social
+                    target={social.target} // Atributo target para abrir en nueva pestaña
+                    rel={social.rel} // Atributo rel para seguridad
                     className={`text-white transition-all duration-300 ${social.hoverClass}`}
                     title={social.title}
                   >
@@ -102,23 +99,19 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Botón de menú móvil: visible solo en pantallas pequeñas */}
+          {/* Botón de menú móvil */}
           <div className="md:hidden">
             <button
-              // Al hacer clic, alternamos el estado de isMenuOpen
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => setIsMenuOpen(!isMenuOpen)} // Alterna el estado del menú móvil
               className="text-white transition-all duration-300 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
             >
-              {/* Cambiamos el ícono según el estado del menú */}
-              <i
-                className={`bi ${isMenuOpen ? "bi-x-lg" : "bi-list"} text-2xl`}
-              ></i>
+              <i className={`bi ${isMenuOpen ? "bi-x-lg" : "bi-list"} text-2xl`} />
             </button>
           </div>
         </div>
 
-        {/* Menú móvil: aparece solo si isMenuOpen es true */}
+        {/* Menú móvil */}
         <div
           className={`md:hidden bg-[#2d6073]/95 backdrop-blur-md transform transition-all duration-300 ease-in-out
           ${
@@ -146,6 +139,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
+
             {/* Redes sociales en el menú móvil */}
             <li className="pt-4">
               <div className="flex space-x-6 px-3">
@@ -153,6 +147,8 @@ const Navbar = () => {
                   <a
                     key={social.id}
                     href={social.link}
+                    target={social.target} // Atributo target para nueva pestaña
+                    rel={social.rel} // Atributo rel para seguridad
                     className={`text-white transition-all duration-300 ${social.hoverClass}`}
                     title={social.title}
                   >
