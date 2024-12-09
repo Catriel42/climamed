@@ -1,3 +1,5 @@
+import ContactSection from "../components/ContactSection/ContactSection";
+
 const Contactanos = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
@@ -5,6 +7,7 @@ const Contactanos = () => {
       <p className="mt-4 text-gray-600 text-center">
         Aqui insertaremos como contactarnos.
       </p>
+      <ContactSection />
     </div>
   );
 };

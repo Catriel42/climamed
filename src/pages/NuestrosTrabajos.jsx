@@ -5,6 +5,7 @@ const NuestrosTrabajos = () => {
       <p className="mt-4 text-gray-600 text-center">
         Aqui insertaremos trabajos que hicimos.
       </p>
+      
     </div>
   );
 };

@@ -1,12 +1,15 @@
 import Carousel from "../components/Carousel/Carousel";
-import QuienesSomos from "../components/QuienesSomos/QuienesSomos";
+import AboutSection from "../components/AboutSection/AboutSection";
+import CatalogSection from "../components/CatalogoSection/CatalogSection";
+import ContactSection from "../components/ContactSection/ContactSection";
 
 const Home = () => {
   return (
     <div>
-      
       <Carousel />
-      <QuienesSomos />
+      <AboutSection />
+      <CatalogSection />
+      <ContactSection />
     </div>
   );
 };

@@ -28,11 +28,24 @@ const redesSociales = [
   {
     id: 2,
     title: "Instagram",
-    link: "#", // Enlace de Instagram
+    link: "https://www.instagram.com/cato_lmental/", // Enlace de Instagram
     icon: <i className="bi bi-instagram text-xl" />, // Ícono de Instagram
     hoverClass:
       "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover
+    target: "_blank", // Abre el enlace en una nueva pestaña
+    rel: "noopener noreferrer", // Agrega seguridad al enlace
   },
+  {
+    id: 2,
+    title: "Facebook",
+    link: "https://www.facebook.com/BigLMental?locale=es_LA", // Enlace de Facebook
+    icon: <i className="bi bi-facebook text-xl" />, // Ícono de Facebook con color azul de Facebook
+    hoverClass:
+      "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover con color azul de Facebook
+    target: "_blank", // Abre el enlace en una nueva pestaña
+    rel: "noopener noreferrer", // Agrega seguridad al enlace
+  }
+  
 ];
 
 // Componente principal Navbar
