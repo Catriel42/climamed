@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+
 import img1 from "../../assets/Carousel/img1.jpg";
 import img2 from "../../assets/Carousel/img2.jpg";
 import img3 from "../../assets/Carousel/img3.jpg";
@@ -11,9 +13,9 @@ const images = [
 ];
 
 // Componente Carousel
-const Carousel = () => {
+const CarouselDesktop = () => {
   const [currentIndex, setCurrentIndex] = useState(0); // Imagen actual
-  const [autoPlay, setAutoPlay] = useState(true); // Reproducción automática
+  const [autoPlay] = useState(true); // Reproducción automática
 
   // Configuración del intervalo para auto-reproducción
   useEffect(() => {
@@ -21,10 +23,10 @@ const Carousel = () => {
     if (autoPlay) {
       intervalId = setInterval(() => {
         setCurrentIndex((currentIndex) => (currentIndex + 1) % images.length); // Avanza cada 10 segundos
-      }, 10000); // 10 segundos
+      }, 6000); // 10 segundos
     }
     return () => clearInterval(intervalId); // Limpiar intervalo al desmontar componente
-  }, [autoPlay, images.length]);
+  });
 
   const handleNext = () => {
     setCurrentIndex((currentIndex) => (currentIndex + 1) % images.length);
@@ -88,4 +90,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default CarouselDesktop;

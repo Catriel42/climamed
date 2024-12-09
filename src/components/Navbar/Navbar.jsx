@@ -1,9 +1,7 @@
-// Importamos React, el hook useState, el logo, y el componente Link de react-router-dom
 import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 import { Link } from "react-router-dom";
 
-// Array de enlaces principales de la barra de navegación
 const navbarLinks = [
   { id: 1, title: "Quienes Somos", link: "/quienes-somos" },
   { id: 2, title: "Servicios", link: "/servicios" },
@@ -13,67 +11,80 @@ const navbarLinks = [
   { id: 6, title: "Contáctanos", link: "/contactanos" },
 ];
 
-// Array de redes sociales con sus íconos, enlaces y efectos visuales
 const redesSociales = [
   {
-    id: 1, // Identificador único
-    title: "WhatsApp", // Título del ícono
+    id: 1,
+    title: "WhatsApp",
     link: "https://wa.me/59175961315?text=Que%20quiere%20joven%3F%20Estoy%20codeando",
-    icon: <i className="bi bi-whatsapp text-xl" />, // Ícono de WhatsApp
+    icon: <i className="bi bi-whatsapp text-xl" />,
     hoverClass:
-      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]", // Efecto de hover
-    target: "_blank", // Abre el enlace en una nueva pestaña
-    rel: "noopener noreferrer", // Agrega seguridad al enlace
+      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     id: 2,
     title: "Instagram",
-    link: "https://www.instagram.com/cato_lmental/", // Enlace de Instagram
-    icon: <i className="bi bi-instagram text-xl" />, // Ícono de Instagram
+    link: "https://www.instagram.com/cato_lmental/",
+    icon: <i className="bi bi-instagram text-xl" />,
     hoverClass:
-      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover
-    target: "_blank", // Abre el enlace en una nueva pestaña
-    rel: "noopener noreferrer", // Agrega seguridad al enlace
+      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
-    id: 2,
+    id: 3,
     title: "Facebook",
-    link: "https://www.facebook.com/BigLMental?locale=es_LA", // Enlace de Facebook
-    icon: <i className="bi bi-facebook text-xl" />, // Ícono de Facebook con color azul de Facebook
+    link: "https://www.facebook.com/BigLMental?locale=es_LA",
+    icon: <i className="bi bi-facebook text-xl" />,
     hoverClass:
-      "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]", // Efecto de hover con color azul de Facebook
-    target: "_blank", // Abre el enlace en una nueva pestaña
-    rel: "noopener noreferrer", // Agrega seguridad al enlace
+      "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    target: "_blank",
+    rel: "noopener noreferrer",
   }
-  
 ];
 
-// Componente principal Navbar
 const Navbar = () => {
-  // Estado para manejar si el menú móvil está abierto o cerrado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    // Contenedor principal del Navbar
-    <nav className="fixed w-full top-0 z-50 bg-cyan-600/80 backdrop-blur-md shadow-lg">
-      <div className="max-w-7xl mx-auto">
-        {/* Contenedor para el logo, los enlaces principales y el menú móvil */}
-        <div className="flex justify-between items-center sm:px-12 sm:py-4 px-4 py-3">
-          {/* Logo del sitio */}
-          <div className="flex-shrink-0">
-            <Link to="/">
-              <img
-                src={Logo}
-                alt="Logo del Sitio"
-                className="w-[120px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
-              />
-            </Link>
-          </div>
+    <>
+      {/* Logo independiente */}
+      <div className="fixed top-1 left-0 z-50 pl-20 pt-2">
+        <Link to="/">
+          <img
+            src={Logo}
+            alt="Logo del Sitio"
+            className="w-[150px] sm:w-[180px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+          />
+        </Link>
+      </div>
 
-          {/* Enlaces principales para pantallas grandes */}
-          <div className="hidden md:block">
+      {/* Íconos de redes sociales independientes */}
+      <div className="fixed top-0 right-0 z-50 pr-20 pt-7 hidden custom:block">
+        <ul className="flex space-x-6">
+          {redesSociales.map((social) => (
+            <li key={social.id}>
+              <a
+                href={social.link}
+                target={social.target}
+                rel={social.rel}
+                className={`text-white transition-all duration-300 ${social.hoverClass}`}
+                title={social.title}
+              >
+                {social.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Navbar central */}
+      <nav className="fixed w-full top-0 z-40 bg-cyan-600/80 backdrop-blur-md shadow-lg h-[84px]">
+        <div className="max-w-7xl mx-auto h-full flex justify-center items-center">
+          {/* Enlaces principales para pantallas grandes (>1230px) */}
+          <div className="hidden custom:block">
             <ul className="flex space-x-8">
-              {/* Renderizamos cada enlace del array navbarLinks */}
               {navbarLinks.map((link) => (
                 <li key={link.id}>
                   <a
@@ -93,29 +104,10 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Íconos de redes sociales para pantallas grandes */}
-          <div className="hidden md:block">
-            <ul className="flex space-x-6">
-              {redesSociales.map((social) => (
-                <li key={social.id}>
-                  <a
-                    href={social.link} // Enlace de la red social
-                    target={social.target} // Atributo target para abrir en nueva pestaña
-                    rel={social.rel} // Atributo rel para seguridad
-                    className={`text-white transition-all duration-300 ${social.hoverClass}`}
-                    title={social.title}
-                  >
-                    {social.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Botón de menú móvil */}
-          <div className="md:hidden">
+          {/* Botón de menú móvil (≤1230px) */}
+          <div className="custom:hidden absolute right-8">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)} // Alterna el estado del menú móvil
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white transition-all duration-300 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]"
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
             >
@@ -124,16 +116,15 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Menú móvil */}
+        {/* Menú móvil (≤1230px) */}
         <div
-          className={`md:hidden bg-[#2d6073]/95 backdrop-blur-md transform transition-all duration-300 ease-in-out
+          className={`custom:hidden bg-[#2d6073]/95 backdrop-blur-md transform transition-all duration-300 ease-in-out
           ${
             isMenuOpen
               ? "opacity-100 translate-y-0 max-h-[400px]"
               : "opacity-0 -translate-y-4 max-h-0 overflow-hidden"
           }`}
         >
-          {/* Lista de enlaces del menú móvil */}
           <ul
             className={`px-4 pt-2 pb-4 space-y-2 ${
               isMenuOpen ? "opacity-100" : "opacity-0"
@@ -153,15 +144,14 @@ const Navbar = () => {
               </li>
             ))}
 
-            {/* Redes sociales en el menú móvil */}
             <li className="pt-4">
               <div className="flex space-x-6 px-3">
                 {redesSociales.map((social) => (
                   <a
                     key={social.id}
                     href={social.link}
-                    target={social.target} // Atributo target para nueva pestaña
-                    rel={social.rel} // Atributo rel para seguridad
+                    target={social.target}
+                    rel={social.rel}
                     className={`text-white transition-all duration-300 ${social.hoverClass}`}
                     title={social.title}
                   >
@@ -172,8 +162,8 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
