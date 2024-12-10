@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <>
       {/* Logo independiente */}
-      <div className="fixed top-1 left-0 z-50 pl-20 pt-2">
+      <div className="fixed top-1 left-0 z-50 pl-10 pt-2">
         <Link to="/">
           <img
             src={Logo}
