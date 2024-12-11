@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/LogoLight.png";
 import { Link } from "react-router-dom";
 
 const navbarLinks = [
-  { id: 1, title: "Quienes Somos", link: "/quienes-somos" },
+  { id: 1, title: "¿Quiénes Somos?", link: "/quienes-somos" },
   { id: 2, title: "Servicios", link: "/servicios" },
   { id: 3, title: "Productos", link: "/productos" },
   { id: 4, title: "Catálogo Web", link: "/catalogo-web" },

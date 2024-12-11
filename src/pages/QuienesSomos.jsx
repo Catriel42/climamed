@@ -1,10 +1,22 @@
+import { useEffect, useState } from "react";
+import ContactSection from "../components/ContactSection/ContactSection";
+
 const QuienesSomos = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-800">Acerca de Nosotros</h1>
-      <p className="mt-4 text-gray-600 text-center">
-        Somos una empresa dedicada a brindar soluciones innovadoras para nuestros clientes.
-      </p>
+    <div className="mt-40" >
+      <h2 className={`${
+              isVisible ? "animate-fadeInBounce" : "opacity-0"
+            } text-5xl font-bold text-primary text-center`}>Acerca de Nosotros</h2>
+      <ContactSection />
     </div>
   );
 };

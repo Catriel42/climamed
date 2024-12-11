@@ -26,12 +26,29 @@ const productData = [
 const Productos = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState(productData);
+  const [placeholder, setPlaceholder] = useState("Buscar...");
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 500);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setPlaceholder("Buscar...");
+      } else {
+        setPlaceholder("Busca un producto...");
+      }
+    };
+
+    // Detecta el cambio en el tamaño de la pantalla al cargar y al redimensionar
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Inicializa el valor del placeholder
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleSearch = (value) => {
@@ -46,19 +63,20 @@ const Productos = () => {
       <div className="p-12 mt-20">
         {/* Contenedor con título y buscador animados */}
         <div className="flex flex-col items-center gap-6">
-          <h1
+          <h2
             className={`${
               isVisible ? "animate-fadeInBounce" : "opacity-0"
             } text-5xl font-bold text-primary`}
           >
             Nuestros Productos
-          </h1>
+          </h2>
           {/* Buscador con la misma animación */}
-          <div className={`${
-            isVisible ? "animate-fadeInBounce" : "opacity-0"
-            } w-full max-w-xl`}
+          <div
+            className={`${
+              isVisible ? "animate-fadeInBounce" : "opacity-0"
+            } w-full max-w-2xl`}
           >
-            <SearchBar placeholder="Busca un producto..." onSearch={handleSearch} />
+            <SearchBar placeholder={placeholder} onSearch={handleSearch} />
           </div>
         </div>
 

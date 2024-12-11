@@ -1,12 +1,21 @@
 import ContactSection from "../components/ContactSection/ContactSection";
+import { useEffect, useState } from "react";
 
 const CatalogoWeb = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-800">Catalogo Web</h1>
-      <p className="mt-4 text-gray-600 text-center">
-        Aqui insertaremos el catalogo web.
-      </p>
+    <div className="mt-40">
+      <h2 className={`${
+              isVisible ? "animate-fadeInBounce" : "opacity-0"
+            } text-5xl font-bold text-primary text-center`}>Catalogo Web</h2>
       <ContactSection />
     </div>
   );
