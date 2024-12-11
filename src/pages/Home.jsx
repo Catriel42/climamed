@@ -34,8 +34,8 @@ const Home = () => {
   };
 
   return (
-    <div>
-      {isMobile ? <CarouselMobile /> : <CarouselDesktop />}
+    <div className="mt-20">
+      {isMobile ? <CarouselMobile/> : <CarouselDesktop />}
       <SectionType1 {...aboutData} />
       <SectionType2 {...catalogData} />
       <ContactSection />

@@ -65,9 +65,9 @@ const ContactSection = () => {
         <p className="text-sm text-gray-600">
           © {new Date().getFullYear()} Friovital - Todos los derechos reservados.
         </p>
-        <p className="text-sm text-gray-600 mt-2">
+        {/* <p className="text-sm text-gray-600 mt-2">
         Página web hecha por <a href="https://www.facebook.com/BigLMental" target="_blank" rel="noopener noreferrer"className="text-primary hover:underline">Catriel Pereira</a>
-        </p>
+        </p> */}
       </footer>
       </div>
     </section>

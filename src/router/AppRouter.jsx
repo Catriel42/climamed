@@ -11,10 +11,12 @@ import Contactanos from "../pages/Contactanos";
 
 // Importa los componentes comunes
 import Navbar from "../components/Navbar/Navbar";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop"; // Asegúrate de que la ruta sea correcta
 
 const AppRouter = () => {
   return (
     <Router basename="/"> {/* Agrega el 'basename' si es necesario */}
+      <ScrollToTop /> {/* Este componente se encargará del desplazamiento */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
