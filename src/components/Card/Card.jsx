@@ -21,10 +21,8 @@ const PSCard = ({ image, title, description, category }) => {
         <div key="quote-container" className="px-4 w-full flex justify-center">
           <Button 
             onClick={handleWhatsAppClick}
-            className="!bg-secondary hover:!bg-primary !text-light w-full transition-colors duration-300 border-none"
-            style={{
-              backgroundColor: '#2d6073',
-            }}
+            className="!bg-secondary hover:!bg-accent !text-light w-full transition-colors duration-300 border-none
+            hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]"
           >
             Cotizar
           </Button>

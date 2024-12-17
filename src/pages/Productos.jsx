@@ -1,6 +1,7 @@
 import { Row, Col } from "antd";
 import { useEffect, useState } from "react";
 import PSCard from "../components/Card/Card";
+import ContactSection from "../components/ContactSection/ContactSection";
 import SearchBar from "../components/SearchBar/SearchBar"; // Importa el componente SearchBar
 import { productData } from "../data/products";
 
@@ -77,6 +78,7 @@ const Productos = () => {
           ))}
         </Row>
       </div>
+      <ContactSection />
     </div>
   );
 };
