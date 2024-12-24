@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Carousel } from 'antd';
 
-import img1 from "../../assets/Carousel/img1.jpg";
-import img2 from "../../assets/Carousel/img2.jpg";
-import img3 from "../../assets/Carousel/img3.jpg";
+import img1 from "../../assets/Carousel/img1.webp";
+import img2 from "../../assets/Carousel/img2.webp";
+import img3 from "../../assets/Carousel/img3.webp";
 
 // Array de imágenes que se mostrarán en el carrusel
 const images = [
