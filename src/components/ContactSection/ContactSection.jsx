@@ -7,7 +7,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 p-6 rounded-lg"> {/* Se aumentó el gap entre las columnas */}
         {/* Columna izquierda (Sobre Friovital) */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-primary">Sobre Friovital</h2>
+          <h2 className="text-2xl font-bold text-primary">Sobre Climamed</h2>
           <ul className="space-y-2">
             <li>
               <Link to="/quienes-somos" className="text-secondary hover:underline">¿Quiénes Somos?</Link>
@@ -32,8 +32,8 @@ const ContactSection = () => {
 
         {/* Columna central (Información de contacto) */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-primary">Contacta con Friovital</h2>
-          <p className="text-lg text-gray-600">FRIOVITAL Cochabamba - Bolivia</p>
+          <h2 className="text-2xl font-bold text-primary">Contacta con Climamed</h2>
+          <p className="text-lg text-gray-600">CLIMAMED Cochabamba - Bolivia</p>
           <p className="text-lg text-gray-600">Teléfono: </p>
           <p className="text-lg text-gray-600">Horario:</p>
           <ul className="text-gray-600 space-y-1">
@@ -41,6 +41,7 @@ const ContactSection = () => {
             <li>Sábado y Domingo: Cerrado</li>
           </ul>
           <p className="text-lg text-gray-600">Atención 24 horas por WhatsApp:</p>
+          <p className="text-lg text-gray-600">60775958</p>
         </div>
 
         {/* Columna derecha (Trabaja con nosotros) */}
@@ -55,15 +56,15 @@ const ContactSection = () => {
           <div className="mt-6 flex">
             <img
               src={logo} // Ruta de la imagen del logo
-              alt="Logo de Friovital"
-              className="w-48 h-auto" // Aumenté el tamaño de la imagen
+              alt="Logo de Climamed Bolivia"
+              className="w- h-auto" // Aumenté el tamaño de la imagen
             />
           </div>
         </div>
         {/* Footer */}
       <footer className="mt-10 text-left py-4 border-t border-gray-600">
         <p className="text-sm text-gray-600">
-          © {new Date().getFullYear()} Friovital - Todos los derechos reservados.
+          © {new Date().getFullYear()} Climamed Bolivia - Todos los derechos reservados.
         </p>
         {/* <p className="text-sm text-gray-600 mt-2">
         Página web hecha por <a href="https://www.facebook.com/BigLMental" target="_blank" rel="noopener noreferrer"className="text-primary hover:underline">Catriel Pereira</a>

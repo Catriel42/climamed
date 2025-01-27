@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import ContactSection from "../components/ContactSection/ContactSection";
 import { AimOutlined, EyeOutlined, RightOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import img1 from "../assets/About.png";
+import LogoCarousel from "../components/LogosCarousel/LogosCarousel";
+import { marcasData } from "../data/Marcas";
+import { clientesData } from "../data/Clientes";
 
 const QuienesSomos = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +28,12 @@ const QuienesSomos = () => {
         } text-5xl font-bold text-primary text-center mb-12`}>
           Acerca de Nosotros
         </h2>
-
+        <LogoCarousel data={marcasData} slidesToShow={4} autoPlayInterval={5000}/>
+        <h5 className={`${
+          isVisible ? "animate-fadeInBounce" : "opacity-0"
+        } text-2xl font-bold text-primary text-center mb-12`}>
+          Nuestras marcas
+        </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
@@ -117,6 +125,12 @@ const QuienesSomos = () => {
             Contáctanos por WhatsApp
             <WhatsAppOutlined className="text-xl" />
           </button>
+          <LogoCarousel data={clientesData} slidesToShow={4} autoPlayInterval={5000}/>
+        <h5 className={`${
+          isVisible ? "animate-fadeInBounce" : "opacity-0"
+        } text-2xl font-bold text-primary text-center mb-12`}>
+          Nuestros clientes
+        </h5>
         </div>
       </div>
       <ContactSection />

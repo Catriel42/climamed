@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 // Configuración de WhatsApp - Fácil de modificar
 const WHATSAPP_CONFIG = {
-  number: "59175961315",
-  message: "Estoy interesado en Climamed, necesito mas información\n Prueba de salto de linea"
+  number: "59160775958",
+  message: "Estoy interesado en Climamed, necesito más información\n"
 };
 
 // Array de enlaces de navegación
@@ -23,12 +23,9 @@ const redesSociales = [
   {
     id: 1,
     title: "WhatsApp",
-    // Uso de la configuración de WhatsApp con encodeURIComponent para espacios y caracteres especiales
     link: `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(WHATSAPP_CONFIG.message)}`,
     icon: <i className="bi bi-whatsapp text-xl" />,
-    // Efecto hover con brillo verde neón
-    hoverClass:
-      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]",
+    hoverClass: "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -37,9 +34,7 @@ const redesSociales = [
     title: "Instagram",
     link: "https://www.instagram.com/cato_lmental/",
     icon: <i className="bi bi-instagram text-xl" />,
-    // Efecto hover con brillo rosa neón
-    hoverClass:
-      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    hoverClass: "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -48,33 +43,33 @@ const redesSociales = [
     title: "Facebook",
     link: "https://www.facebook.com/BigLMental?locale=es_LA",
     icon: <i className="bi bi-facebook text-xl" />,
-    // Efecto hover con brillo azul neón
-    hoverClass:
-      "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    hoverClass: "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
   }
 ];
 
 const Navbar = () => {
-  // Estado para controlar el menú móvil
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
-      {/* Logo en la esquina superior izquierda */}
-      <div className="fixed top-1 left-0 z-50 pl-10 pt-2">
-        <Link to="/">
-          <img
-            src={Logo}
-            alt="Logo del Sitio"
-            className="w-[150px] sm:w-[180px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
-          />
-        </Link>
+      {/* Logo container with white background - Ahora con ancho ajustable */}
+      <div className="fixed top-0 left-0 z-50 h-[96px] bg-white w-64">
+        {/* Aumentamos el padding-left para dar más espacio al logo */}
+        <div className="h-full flex items-center">
+          <Link to="/">
+            <img
+              src={Logo}
+              alt="Logo del Sitio"
+              className="w-[150px] sm:w-[380px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(175,255,255,0.7)]"
+            />
+          </Link>
+        </div>
       </div>
 
       {/* Íconos de redes sociales en la esquina superior derecha (visible en desktop) */}
-      <div className="fixed top-0 right-0 z-50 pr-20 pt-7 hidden custom:block">
+      <div className="fixed top-1 right-0 z-50 pr-20 pt-7 hidden custom:block">
         <ul className="flex space-x-6">
           {redesSociales.map((social) => (
             <li key={social.id}>
@@ -92,21 +87,19 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Barra de navegación principal */}
-      <nav className="fixed w-full top-0 z-40 bg-cyan-600/80 backdrop-blur-md shadow-lg h-[84px]">
+      {/* Barra de navegación principal - Ahora con altura ajustable */}
+      <nav className="fixed w-full top-0 z-40 bg-cyan-600/80 backdrop-blur-md shadow-lg h-24">
         <div className="max-w-7xl mx-auto h-full flex justify-center items-center">
-          {/* Enlaces de navegación para desktop (>1230px) */}
-          <div className="hidden custom:block">
+          {/* Añadimos un padding-left para compensar el espacio del logo */}
+          <div className="hidden custom:block pl-64">
             <ul className="flex space-x-8">
               {navbarLinks.map((link) => (
                 <li key={link.id}>
                   <a
                     href={link.link}
                     className="text-white relative font-medium text-sm uppercase tracking-wide py-2 px-1
-                    /* Efecto de brillo celeste neón al hover - Color: cyan-300 (#67E8F9) */
                     hover:text-cyan-300 transition-all duration-300
                     hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]
-                    /* Efecto de línea inferior animada */
                     after:content-[''] after:absolute after:w-full after:h-[2px] 
                     after:bg-cyan-300 after:bottom-0 after:left-0
                     after:scale-x-0 hover:after:scale-x-100
@@ -145,7 +138,6 @@ const Navbar = () => {
               isMenuOpen ? "opacity-100" : "opacity-0"
             } transition-opacity duration-200 delay-100`}
           >
-            {/* Enlaces de navegación en móvil */}
             {navbarLinks.map((link) => (
               <li key={link.id}>
                 <a
@@ -160,7 +152,6 @@ const Navbar = () => {
               </li>
             ))}
 
-            {/* Redes sociales en menú móvil */}
             <li className="pt-4">
               <div className="flex space-x-6 px-3">
                 {redesSociales.map((social) => (
