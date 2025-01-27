@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Configuración de WhatsApp - Fácil de modificar
 const WHATSAPP_CONFIG = {
   number: "59160775958",
-  message: "Estoy interesado en Climamed, necesito más información\n"
+  message: "Estoy interesado en Climamed, necesito más información\n",
 };
 
 // Array de enlaces de navegación
@@ -23,9 +23,12 @@ const redesSociales = [
   {
     id: 1,
     title: "WhatsApp",
-    link: `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(WHATSAPP_CONFIG.message)}`,
+    link: `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodeURIComponent(
+      WHATSAPP_CONFIG.message
+    )}`,
     icon: <i className="bi bi-whatsapp text-xl" />,
-    hoverClass: "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]",
+    hoverClass:
+      "hover:text-green-400 hover:drop-shadow-[0_0_8px_rgba(74,222,128,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -34,7 +37,8 @@ const redesSociales = [
     title: "Instagram",
     link: "https://www.instagram.com/cato_lmental/",
     icon: <i className="bi bi-instagram text-xl" />,
-    hoverClass: "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    hoverClass:
+      "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
   },
@@ -43,10 +47,11 @@ const redesSociales = [
     title: "Facebook",
     link: "https://www.facebook.com/BigLMental?locale=es_LA",
     icon: <i className="bi bi-facebook text-xl" />,
-    hoverClass: "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
+    hoverClass:
+      "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
     target: "_blank",
     rel: "noopener noreferrer",
-  }
+  },
 ];
 
 const Navbar = () => {
@@ -62,7 +67,7 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Logo del Sitio"
-              className="w-[150px] sm:w-[380px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(175,255,255,0.7)]"
+              className="w-auto sm:w-[380px] lg:w-[500px] hover:opacity-90 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(175,255,255,0.7)]"
             />
           </Link>
         </div>
@@ -119,7 +124,9 @@ const Navbar = () => {
               className="text-white transition-all duration-300 hover:text-cyan-300 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]"
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
             >
-              <i className={`bi ${isMenuOpen ? "bi-x-lg" : "bi-list"} text-2xl`} />
+              <i
+                className={`bi ${isMenuOpen ? "bi-x-lg" : "bi-list"} text-2xl`}
+              />
             </button>
           </div>
         </div>

@@ -28,7 +28,7 @@ const Home = () => {
   // Datos para About Section
   const aboutData = {
     title: "Acerca de nosotros",
-    description: "FRIOVITAL es una empresa boliviana dedicada a brindarte soluciones industriales en frío.",
+    description: "CLIMAMED es una empresa boliviana dedicada a brindarte soluciones industriales en frío.",
     buttonText: "CONOCE MÁS",
     buttonLink: "/quienes-somos",
     image: aboutImage,
@@ -49,6 +49,7 @@ const Home = () => {
     <div className="mt-20">
       {isMobile ? <CarouselMobile/> : <CarouselDesktop />}
       <LogoCarousel data={marcasData} slidesToShow={4} autoPlayInterval={5000}/>
+      
         <h5 className={`${
           isVisible ? "animate-fadeInBounce" : "opacity-0"
         } text-2xl font-bold text-primary text-center mb-12`}>

@@ -1,8 +1,26 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const LogoCarousel = ({ autoPlayInterval = 3000, slidesToShow = 3, data }) => {
+const LogoCarousel = ({ autoPlayInterval = 3000, data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // Definimos el estado para el número de slides a mostrar
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setSlidesToShow(1); // En pantallas pequeñas, mostramos 1 imagen
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2); // En pantallas medianas, mostramos 2 imágenes
+      } else {
+        setSlidesToShow(3); // En pantallas grandes, mostramos 3 imágenes
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Llamamos a la función una vez al inicio para configurar el tamaño adecuado de los slides
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Solo ejecutamos esto al principio, cuando se monta el componente
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +43,7 @@ const LogoCarousel = ({ autoPlayInterval = 3000, slidesToShow = 3, data }) => {
   };
 
   return (
-    <div className="w-full relative overflow-hidden px-8 my-12">
+    <div className="w-full relative overflow-hidden px-4 my-12">
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
@@ -44,14 +62,14 @@ const LogoCarousel = ({ autoPlayInterval = 3000, slidesToShow = 3, data }) => {
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex-none px-4"
+            className="flex-none px-2 sm:px-4"
             style={{ width: `${100 / slidesToShow}%` }}
           >
             <div className="bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow">
               <img
                 src={item.imageUrl}
                 alt={item.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-48 sm:h-64 object-cover"
               />
             </div>
           </div>
@@ -84,7 +102,6 @@ const LogoCarousel = ({ autoPlayInterval = 3000, slidesToShow = 3, data }) => {
 
 LogoCarousel.propTypes = {
   autoPlayInterval: PropTypes.number,
-  slidesToShow: PropTypes.number,
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -96,7 +113,6 @@ LogoCarousel.propTypes = {
 
 LogoCarousel.defaultProps = {
   autoPlayInterval: 3000,
-  slidesToShow: 3,
 };
 
 export default LogoCarousel;
