@@ -11,7 +11,7 @@ export const productData = [
     { 
         id: 1, 
         image: prod1, 
-        title: "Producto 1", 
+        title: "Valvulas de Expansion", 
         description: "Descripción del producto 1",
         category: "Categoría A",
         imageAlt: "Descripcion imagen producto 1"
