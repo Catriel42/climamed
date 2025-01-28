@@ -32,7 +32,7 @@ const ContactForm = () => {
 
     const { name, phone, /* email, */ department, subject, message } = formData;
 
-    const formattedMessage = `Friovital:\n\nSoy ${name}\nDel departamento de ${department}.\nAsunto: ${subject}\n ${message}.\nMi numero es: ${phone}`;
+    const formattedMessage = `Climamed:\n\nSoy ${name}\nDel departamento de ${department}.\nAsunto: ${subject}\n ${message}.\nMi numero es: ${phone}`;
 
     // WhatsApp Link (to open the chat with formatted message)
     const whatsappUrl = `https://wa.me/59175961315?text=${encodeURIComponent(formattedMessage)}`;
@@ -145,16 +145,16 @@ const ContactForm = () => {
       </form>
       {/* Redes sociales */}
       <div className="flex justify-center space-x-4 mt-6">
-        <a href="https://wa.me/59175961315" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/59160775958" target="_blank" rel="noopener noreferrer">
           <WhatsAppOutlined className="text-2xl text-primary hover:text-accent" />
         </a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/profile.php?id=61572377169715" target="_blank" rel="noopener noreferrer">
           <FacebookOutlined className="text-2xl text-primary hover:text-accent" />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
           <InstagramOutlined className="text-2xl text-primary hover:text-accent" />
         </a>
-        <a href="mailto:admin@tusitio.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:climamedbolivia@gmail.com" target="_blank" rel="noopener noreferrer">
           <MailOutlined className="text-2xl text-primary hover:text-accent" />
         </a>
       </div>

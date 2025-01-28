@@ -34,11 +34,10 @@ const ContactSection = () => {
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-primary">Contacta con Climamed</h2>
           <p className="text-lg text-gray-600">CLIMAMED Cochabamba - Bolivia</p>
-          <p className="text-lg text-gray-600">Teléfono: </p>
           <p className="text-lg text-gray-600">Horario:</p>
-          <ul className="text-gray-600 space-y-1">
+          <ul className="">
             <li>Lunes a Viernes: 8:30 - 18:30</li>
-            <li>Sábado y Domingo: Cerrado</li>
+            <li>Sábado y Domingo: Emergencias</li>
           </ul>
           <p className="text-lg text-gray-600">Atención 24 horas por WhatsApp:</p>
           <p className="text-lg text-gray-600">60775958</p>
@@ -47,7 +46,7 @@ const ContactSection = () => {
         {/* Columna derecha (Trabaja con nosotros) */}
         <div className="space-y-6">
           <h2 className="text-2xl font-bold text-primary">Trabaja con nosotros</h2>
-          <Link to="/trabaja-con-nosotros">
+          <Link to="/contactanos">
             <button className="bg-primary text-white px-6 py-3 rounded-md font-semibold shadow-md hover:bg-secondary transition-all duration-300 mt-4">
               Trabaja con nosotros
             </button>
@@ -66,9 +65,9 @@ const ContactSection = () => {
         <p className="text-sm text-gray-600">
           © {new Date().getFullYear()} Climamed Bolivia - Todos los derechos reservados.
         </p>
-        {/* <p className="text-sm text-gray-600 mt-2">
-        Página web hecha por <a href="https://www.facebook.com/BigLMental" target="_blank" rel="noopener noreferrer"className="text-primary hover:underline">Catriel Pereira</a>
-        </p> */}
+        <p className="text-sm text-gray-600 mt-2">
+        Página web hecha por <a href="https://www.instagram.com/catodev_/" target="_blank" rel="noopener noreferrer"className="text-primary hover:underline">Catriel Pereira</a>
+        </p>
       </footer>
       </div>
     </section>

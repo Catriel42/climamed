@@ -17,7 +17,7 @@ const QuienesSomos = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/59175961315', '_blank'); // Reemplaza con el número real
+    window.open('https://wa.me/59160775958', '_blank'); 
   };
 
   return (
@@ -37,7 +37,7 @@ const QuienesSomos = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              Friovital es una empresa líder especializada en soluciones de refrigeración industrial y comercial. 
+              Climamed es una empresa líder especializada en soluciones de refrigeración industrial y comercial. 
               Con más de X años de experiencia, nos dedicamos a garantizar la calidad y eficiencia en el 
               mantenimiento de sistemas de refrigeración.
             </p>
@@ -84,7 +84,7 @@ const QuienesSomos = () => {
           </div>
         </div>
 
-        {/* Nuevas secciones de Misión y Visión */}
+        {/* Secciones de Misión y Visión */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className={`${
             isVisible ? "animate-fadeInBounce" : "opacity-0"

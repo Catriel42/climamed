@@ -35,7 +35,7 @@ const redesSociales = [
   {
     id: 2,
     title: "Instagram",
-    link: "https://www.instagram.com/cato_lmental/",
+    link: "https://www.instagram.com",
     icon: <i className="bi bi-instagram text-xl" />,
     hoverClass:
       "hover:text-pink-500 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
@@ -45,7 +45,7 @@ const redesSociales = [
   {
     id: 3,
     title: "Facebook",
-    link: "https://www.facebook.com/BigLMental?locale=es_LA",
+    link: "https://www.facebook.com/profile.php?id=61572377169715",
     icon: <i className="bi bi-facebook text-xl" />,
     hoverClass:
       "hover:text-[#1877f2] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.7)]",
@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <>
       {/* Logo container with white background - Ahora con ancho ajustable */}
-      <div className="fixed top-0 left-0 z-50 h-[96px] bg-white w-64">
+      <div className="fixed top-0 left-0 z-50 h-[96px] bg-white w-64 bg-gradient-to-b from-white to-transparent">
         {/* Aumentamos el padding-left para dar más espacio al logo */}
         <div className="h-full flex items-center">
           <Link to="/">
