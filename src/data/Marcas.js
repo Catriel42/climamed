@@ -1,14 +1,14 @@
-import img1 from "../assets/Marcas/img1.jpeg"
-import img2 from "../assets/Marcas/img2.jpeg";
-import img3 from "../assets/Marcas/img3.jpeg";
-import img4 from "../assets/Marcas/img4.jpeg";
+import img1 from "../assets/Marcas/img1.png"
+import img2 from "../assets/Marcas/img2.png";
+import img3 from "../assets/Marcas/img3.png";
+import img4 from "../assets/Marcas/img4.png";
 import img5 from "../assets/Marcas/img5.jpeg";
-import img6 from "../assets/Marcas/img6.jpeg";
-import img7 from "../assets/Marcas/img7.jpeg";
+import img6 from "../assets/Marcas/img6.png";
+import img7 from "../assets/Marcas/img7.png";
 import img8 from "../assets/Marcas/img8.jpeg";
-import img9 from "../assets/Marcas/img9.jpeg";
-import img10 from "../assets/Marcas/img10.jpeg";
-import img11 from "../assets/Marcas/img11.jpeg";
+import img9 from "../assets/Marcas/img9.png";
+import img10 from "../assets/Marcas/img10.png";
+import img11 from "../assets/Marcas/img11.jpg";
 
 export const marcasData = [
     { id: 1, imageUrl: img1, name: "Imagen 1" },

@@ -1,11 +1,11 @@
-import img1 from "../assets/Clientes/img1.jpeg";
-import img2 from "../assets/Clientes/img2.jpeg";
-import img3 from "../assets/Clientes/img3.jpeg";
-import img4 from "../assets/Clientes/img4.jpeg";
-import img5 from "../assets/Clientes/img5.jpeg";
-import img6 from "../assets/Clientes/img6.jpeg";
-import img7 from "../assets/Clientes/img7.jpeg";
-import img8 from "../assets/Clientes/img8.jpeg";
+import img1 from "../assets/Clientes/img1.png";
+import img2 from "../assets/Clientes/img2.png";
+import img3 from "../assets/Clientes/img3.png";
+import img4 from "../assets/Clientes/img4.png";
+import img5 from "../assets/Clientes/img5.png";
+import img6 from "../assets/Clientes/img6.png";
+import img7 from "../assets/Clientes/img7.png";
+import img8 from "../assets/Clientes/img8.png";
 
 export const clientesData = [
     { id: 1, imageUrl: img1, name: "Cliente 1" },

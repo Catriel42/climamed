@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import img1 from "../../assets/Carousel/img1.webp";
 import img2 from "../../assets/Carousel/img2.webp";
 import img3 from "../../assets/Carousel/img3.webp";
+//import img4 from "../../assets/Carousel/ClimamedBrand.png";
 
 // Array de imágenes que se mostrarán en el carrusel
 const images = [
   { id: 1, src: img1 },
   { id: 2, src: img2 },
   { id: 3, src: img3 },
+  /* { id: 4, src: img4 }, */
 ];
 
 // Componente Carousel
@@ -52,7 +54,7 @@ const CarouselDesktop = () => {
             <img
               src={image.src}
               alt={`Image ${image.id}`}
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}
