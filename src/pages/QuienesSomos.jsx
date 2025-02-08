@@ -33,7 +33,7 @@ const QuienesSomos = () => {
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
               Climamed es una empresa líder especializada en soluciones de refrigeración industrial y comercial. 
-              Con más de X años de experiencia, nos dedicamos a garantizar la calidad y eficiencia en el 
+              Nos dedicamos a garantizar la calidad y eficiencia en el 
               mantenimiento de sistemas de refrigeración.
             </p>
 

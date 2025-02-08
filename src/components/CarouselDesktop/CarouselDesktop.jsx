@@ -4,14 +4,17 @@ import { useState, useEffect } from "react";
 import img1 from "../../assets/Carousel/img1.webp";
 import img2 from "../../assets/Carousel/img2.webp";
 import img3 from "../../assets/Carousel/img3.webp";
-//import img4 from "../../assets/Carousel/ClimamedBrand.png";
+import img4 from "../../assets/Carousel/img4.png";
+import img5 from "../../assets/Carousel/img5.png";
 
 // Array de imágenes que se mostrarán en el carrusel
 const images = [
+  { id: 4, src: img4 },
+  { id: 5, src: img5 },
   { id: 1, src: img1 },
   { id: 2, src: img2 },
   { id: 3, src: img3 },
-  /* { id: 4, src: img4 }, */
+  
 ];
 
 // Componente Carousel
@@ -59,8 +62,6 @@ const CarouselDesktop = () => {
           </div>
         ))}
       </div>
-
-      {/* Botones de navegación (anterior y siguiente) */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 flex justify-between w-full px-4">
         <button
           onClick={handlePrev}
@@ -74,19 +75,6 @@ const CarouselDesktop = () => {
         >
           <i className="bi bi-chevron-right text-2xl"></i>
         </button>
-      </div>
-
-      {/* Indicadores del índice actual */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-              currentIndex === index ? "bg-gray-400" : "bg-gray-200"
-            }`}
-          ></button>
-        ))}
       </div>
     </div>
   );

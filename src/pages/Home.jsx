@@ -16,17 +16,15 @@ import { marcasData } from "../data/Marcas";
 const Home = () => {
   const isMobile = useMediaQuery({ maxWidth: 960 });
 
-  // Datos para About Section
   const aboutData = {
     title: "Acerca de nosotros",
-    description: "CLIMAMED es una empresa boliviana dedicada a brindarte soluciones industriales en frío.",
+    description: "CLIMAMED es una empresa líder especializada en soluciones de refrigeración industrial y comercial. Nos dedicamos a garantizar la calidad y eficiencia en el mantenimiento de sistemas de refrigeración.",
     buttonText: "CONOCE MÁS",
     buttonLink: "/quienes-somos",
     image: aboutImage,
     imageAlt: "Personas en reunión"
   };
 
-  // Datos para Catalog Section
   const catalogData = {
     title: "Catálogo de Productos",
     description: "Explora nuestra amplia gama de productos para encontrar las soluciones industriales en frío que necesitas. ¡Descubre lo mejor para tu negocio!",
@@ -43,7 +41,6 @@ const Home = () => {
       <SectionType1 {...aboutData} />
       <SectionType2 {...catalogData} />
       <LogoCarousel data={clientesData} prompt=" Nuestros Clientes" slidesToShow={4} autoPlayInterval={5000}/>
-
       <ContactSection />
     </div>
   );

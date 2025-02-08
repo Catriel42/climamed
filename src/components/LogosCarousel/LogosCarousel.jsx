@@ -82,18 +82,6 @@ const LogoCarousel = ({ autoPlayInterval = 3000, data, prompt = "marcas" }) => {
           >
             <i className="bi bi-chevron-right text-2xl"></i>
           </button>
-
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2">
-            {data.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  currentIndex === index ? "bg-gray-400" : "bg-gray-200"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </div>

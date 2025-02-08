@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Configuración de WhatsApp - Fácil de modificar
 const WHATSAPP_CONFIG = {
   number: "59160775958",
-  message: "Estoy interesado en Climamed, necesito más información\n",
+  message: "Estoy interesado en Climamed, necesito más información.",
 };
 
 // Array de enlaces de navegación
@@ -18,7 +18,6 @@ const navbarLinks = [
   { id: 6, title: "Contáctanos", link: "/contactanos" },
 ];
 
-// Array de redes sociales con sus configuraciones
 const redesSociales = [
   {
     id: 1,

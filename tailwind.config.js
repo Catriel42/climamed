@@ -22,11 +22,11 @@ export default {
         light: '#f0f7da',     // color5 - Beige claro
         muted: '#f5f5f5',     // Mantenemos este color neutro
       },
-      // El resto de la configuración permanece igual...
+      // Fuentes elegantes y estándar
       fontFamily: {
-        sans: ['Poppins', 'Arial', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-        mono: ['Fira Code', 'monospace'],
+        sans: ['Poppins', 'Arial', 'sans-serif'],  // Para texto común
+        serif: ['Merriweather', 'Georgia', 'serif'], // Para títulos y textos destacados
+        mono: ['Fira Code', 'Courier New', 'monospace'], // Para código o estilo técnico
       },
       spacing: {
         '128': '32rem',

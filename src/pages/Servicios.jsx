@@ -1,6 +1,5 @@
 //Importaciones de componentes
 import SectionType1 from '../components/SectionType1/SectionType1';
-import SectionType2 from '../components/SectionType2/SectionType2';
 import ContactSection from '../components/ContactSection/ContactSection';
 import { useEffect, useState } from "react";
 import { serviciosData } from "../data/services";
@@ -21,9 +20,9 @@ const Servicios = () => {
               isVisible ? "animate-fadeInBounce" : "opacity-0"
             } text-5xl font-bold text-primary text-center`}>Servicios que brindamos</h2>
       <SectionType1 {...serviciosData[0]} />
-      <SectionType1 {...serviciosData[1]} />
       <SectionType1 {...serviciosData[2]} />
-      <SectionType2 className="" {...serviciosData[3]} />
+      <SectionType1 {...serviciosData[1]} />
+      <SectionType1 {...serviciosData[3]} />
       <ContactSection />
     </div>
   );

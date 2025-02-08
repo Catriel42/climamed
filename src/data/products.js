@@ -14,7 +14,7 @@ export const productData = [
     { 
         id: 1, 
         image: prod1, 
-        title: "Valvulas de expansión", 
+        title: "Valvulas de Expansión", 
         description: "Precisión y Control para Máxima Eficiencia. Nuestras válvulas de expansión regulan con exactitud el flujo de refrigerante, garantizando un enfriamiento óptimo, reducción de consumo energético y protección prolongada de tus equipos. ",
         category: "Repuestos",
         imageAlt: "Descripcion imagen producto 1"
@@ -38,8 +38,8 @@ export const productData = [
     {
         id: 5,
         image: compresorHermetico,
-        title: "Compresor Hermético",
-        description: "compresor de alta calidad puede reducir tus costos energéticos y mejorar la durabilidad de tu equip. Con CLIMAMED, obtienes no solo productos de calidad, sino también la tranquilidad de un funcionamiento óptimo y duradero.",
+        title: "Compresores Herméticos",
+        description: "Compresor de alta calidad, puede reducir tus costos energéticos y mejorar la durabilidad de tu equip. Con CLIMAMED, obtienes no solo productos de calidad, sino también la tranquilidad de un funcionamiento óptimo y duradero.",
         category: "Repuestos",
         imageAlt: "Descripcion imagen producto 5"
     },
@@ -54,7 +54,7 @@ export const productData = [
     {
         id: 7,
         image: termostato,
-        title: "Termostáto analógicos y digitales",
+        title: "Termostátos analógicos y digitales",
         description: "Controlador de temperatura con menú practico y dinámico garantizando el adecuado control de tus instalaciones pará tener un funcionamiento óptimo y confiable",
         category: "Repuestos",
         imageAlt: "Descripcion imagen producto 7"

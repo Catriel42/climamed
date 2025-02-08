@@ -5,12 +5,14 @@ import img1 from "../../assets/Carousel/img1.webp";
 import img2 from "../../assets/Carousel/img2.webp";
 import img3 from "../../assets/Carousel/img3.webp";
 
+
 // Array de imágenes que se mostrarán en el carrusel
 const images = [
   { id: 1, src: img1 },
   { id: 2, src: img2 },
   { id: 3, src: img3 },
 ];
+
 
 const CarouselMobile = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
