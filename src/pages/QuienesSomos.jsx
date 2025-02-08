@@ -31,15 +31,15 @@ const QuienesSomos = () => {
         <LogoCarousel data={marcasData} prompt="Nuestras Marcas" slidesToShow={4} autoPlayInterval={5000}/>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="space-y-6">
-            <p className="text-lg leading-relaxed">
-              Climamed es una empresa líder especializada en soluciones de refrigeración industrial y comercial. 
-              Nos dedicamos a garantizar la calidad y eficiencia en el 
-              mantenimiento de sistemas de refrigeración.
+            <p className="text-lg leading-relaxed text-justify">
+              Climamed es una empresa especializada en soluciones de refrigeración industrial, comercial e instalaciones hospitalarias y de equipos médicos en general. 
+              Nos caracterizamos por garantizar la calidad y eficiencia en el 
+              mantenimiento de sistemas de refrigeración y brindar asistencia médica inmediata.
             </p>
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">Nuestra Dedicación</h3>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed text-justify">
                 Nos comprometemos a proporcionar servicios de la más alta calidad, utilizando tecnología 
                 de vanguardia y siguiendo los más altos estándares de la industria. Nuestro equipo de 
                 técnicos certificados trabaja incansablemente para asegurar el funcionamiento óptimo de 
@@ -49,7 +49,7 @@ const QuienesSomos = () => {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">Ventajas de Elegirnos</h3>
-              <ul className="space-y-2 text-lg">
+              <ul className="space-y-2 text-lg text-justify">
                 <li className="flex items-start gap-2">
                   <RightOutlined className="mt-1 text-primary flex-shrink-0" />
                   <span>Servicio disponible 24/7 para emergencias</span>
@@ -88,7 +88,7 @@ const QuienesSomos = () => {
               <AimOutlined className="text-primary text-3xl" />
               <h3 className="text-2xl font-bold text-primary">Misión</h3>
             </div>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-justify">
               Nuestra misión es proporcionar soluciones de refrigeración innovadoras y 
               sostenibles que superen las expectativas de nuestros clientes, garantizando 
               la máxima eficiencia y confiabilidad en cada servicio, mientras contribuimos 
@@ -103,7 +103,7 @@ const QuienesSomos = () => {
               <EyeOutlined className="text-primary text-3xl" />
               <h3 className="text-2xl font-bold text-primary">Visión</h3>
             </div>
-            <p className="text-lg leading-relaxed">
+            <p className="text-lg leading-relaxed text-justify">
               Ser reconocidos como la empresa líder en soluciones de refrigeración a nivel 
               nacional, destacándonos por nuestra excelencia técnica, innovación constante 
               y compromiso con la satisfacción del cliente, mientras establecemos nuevos 
@@ -123,7 +123,6 @@ const QuienesSomos = () => {
           <div className="py-16">
             <LogoCarousel data={clientesData} prompt="Nuestros Clientes" slidesToShow={4} autoPlayInterval={5000}/>
           </div>
-          
         </div>
       </div>
       <ContactSection />

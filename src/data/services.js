@@ -3,6 +3,7 @@ import serv2 from '../assets/Servicios/serv1.jpg';
 import serv3 from '../assets/Servicios/serv3.jpg';
 import serv4 from '../assets/Servicios/serv4.webp';
 
+
 export const serviciosData = [
     {
         title: "Instalaciones Hospitalarias",

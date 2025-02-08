@@ -1,12 +1,9 @@
-// Home.jsx
 import { useMediaQuery } from 'react-responsive';
-import SectionType1 from '../components/SectionType1/SectionType1';
 import SectionType2 from '../components/SectionType2/SectionType2';
 import ContactSection from '../components/ContactSection/ContactSection';
 import CarouselDesktop from "../components/CarouselDesktop/CarouselDesktop";
 import CarouselMobile from "../components/CarouselMobile/CarouselMobile";
 
-// Importa las imágenes
 import aboutImage from '../assets/img1.jpg';
 import catalogImage from '../assets/img2.jpg';
 import LogoCarousel from '../components/LogosCarousel/LogosCarousel';
@@ -36,11 +33,11 @@ const Home = () => {
 
   return (
     <div className="mt-20">
-      {isMobile ? <CarouselMobile/> : <CarouselDesktop />}
-      <LogoCarousel data={marcasData} prompt="Nuestras Marcas" slidesToShow={4} autoPlayInterval={5000}/>
-      <SectionType1 {...aboutData} />
+      {isMobile ? <CarouselMobile /> : <CarouselDesktop />}
+      <LogoCarousel data={marcasData} prompt="Nuestras Marcas" slidesToShow={4} autoPlayInterval={5000} />
+      <SectionType2 {...aboutData} />
       <SectionType2 {...catalogData} />
-      <LogoCarousel data={clientesData} prompt=" Nuestros Clientes" slidesToShow={4} autoPlayInterval={5000}/>
+      <LogoCarousel data={clientesData} prompt="Nuestros Clientes" slidesToShow={4} autoPlayInterval={5000} />
       <ContactSection />
     </div>
   );
