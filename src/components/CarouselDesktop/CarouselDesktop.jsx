@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
-
-import img1 from "../../assets/Carousel/img1.webp";
 import img2 from "../../assets/Carousel/img2.webp";
-import img3 from "../../assets/Carousel/img3.webp";
 import img4 from "../../assets/Carousel/img4.png";
 import img5 from "../../assets/Carousel/img5.png";
 
@@ -11,9 +8,7 @@ import img5 from "../../assets/Carousel/img5.png";
 const images = [
   { id: 4, src: img4 },
   { id: 5, src: img5 },
-  { id: 1, src: img1 },
   { id: 2, src: img2 },
-  { id: 3, src: img3 },
   
 ];
 
