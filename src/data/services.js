@@ -22,17 +22,17 @@ export const serviciosData = [
         buttonLink: "#",
         image: instalacionesHospitalarias,
         imageAlt: "Descripcion imagen servicio 1",
-        category: "Categoría F"
+        category: "Instalaciones hospitalarias"
     },
     {
-        title: "Climatización domiciliaria y hospitalaria",
+        title: "Climatización comercial, domicialiaria y hospitalaria",
         description: `
         <p class="service-highlight">Confort y Eficiencia en <strong>Ambientes Controlados</strong></p>
         <p>En CLIMAMED ofrecemos soluciones de climatización para hogares y hospitales, garantizando eficiencia energética y confort térmico bajo los estándares más exigentes.</p>
         <ul class="service-list">
-            <li>Diseño personalizado para <strong>cualquier tipo de instalación</strong></li>
-            <li>Equipos de <strong>alta eficiencia energética y bajo ruido</strong></li>
-            <li>Filtración avanzada para <strong>aire limpio y libre de contaminantes</strong></li>
+            <li>Diseño personalizado para <strong>cualquier tipo de instalación</strong> como carnicerías, industrias lacteas, cervecerías,etc.</li>
+            <li>Variedad de equipos <strong> que cuentan con disposicón de repuestos para todas las instalaciones</strong></li>
+            <li>Filtración avanzada para <strong>aire limpio y libre de contaminantes para ambientes especial como quirófanos, laboratorios, etc.</strong></li>
             <li>Automatización inteligente con <strong>control remoto y programación</strong></li>
         </ul>
         <p class="service-callout">Soporte <strong>24/7</strong> y mantenimiento preventivo</p>
@@ -42,7 +42,7 @@ export const serviciosData = [
         buttonLink: "#",
         image: serv2,
         imageAlt: "Descripcion imagen servicio 2",
-        category: "Categoría D"
+        category: "Instalaciones domeśticas y hospitalarias"
     },
     {
         title: "Instalación de cámaras frigoríficas para reactivos y fármacos",
@@ -53,16 +53,14 @@ export const serviciosData = [
                 <li>Control preciso de temperatura y humedad para <strong>productos termolábiles</strong></li>
                 <li>Sistemas de <strong>monitoreo continuo y registro de datos</strong></li>
                 <li>Diseños <strong>libres de contaminantes y anti-bacteriales</strong></li>
-                <li>Backup energético para <strong>operación ininterrumpida</strong></li>
             </ul>
-            <p class="service-callout">Certificación <strong>GMP y Normativa Internacional</strong></p>
             <p class="service-tagline">La integridad de tus productos es nuestra prioridad.</p>
         `,
         buttonText: "Solicitar cotización",
         buttonLink: "#",
         image: serv3,
         imageAlt: "Cámara frigorífica para almacenamiento de fármacos y reactivos",
-        category: "Categoría E"
+        category: "Instalaciones industriales"
     },
     {
         title: "Instalación de cámaras frigoríficas industriales",
@@ -75,14 +73,13 @@ export const serviciosData = [
                 <li>Sistemas de <strong>eficiencia energética y bajo impacto ambiental</strong></li>
                 <li>Monitoreo 24/7 con <strong>alertas en tiempo real y registro de datos</strong></li>
             </ul>
-            <p class="service-callout">Cumplimiento de <strong>normativas internacionales y certificaciones</strong></p>
             <p class="service-tagline">La excelencia en frío industrial para tu negocio.</p>
         `,
         buttonText: "Solicitar cotización",
         buttonLink: "#",
         image: serv4,
         imageAlt: "Cámara frigorífica industrial para almacenamiento a gran escala",
-        category: "Categoría G"
+        category: "Instalaciones industriales"
     }
 ];
 
