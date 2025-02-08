@@ -22,7 +22,7 @@ const NuestrosTrabajos = () => {
       <SectionType1 {...jobsData[0]} />
       <SectionType1 {...jobsData[1]} />
       <SectionType1 {...jobsData[2]} />
-      <SectionType2 {...jobsData[3]} />
+      <SectionType1 {...jobsData[3]} />
       <ContactSection />
     </div>
   );

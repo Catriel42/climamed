@@ -1,8 +1,8 @@
 // Importa las imágenes
-import job1 from '../assets/Servicios/serv1.jpg';
-import job2 from '../assets/Servicios/serv2.jpg';
+import job1 from '../assets/Jobs/job1.jpeg';
+import job2 from '../assets/Jobs/job2.jpeg';
 import job3 from '../assets/Servicios/serv3.jpg';
-import job4 from '../assets/Servicios/serv4.jpg';
+import job4 from '../assets/Jobs/job4.jpeg';
 
 export const jobsData = [
     {
