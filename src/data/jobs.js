@@ -3,6 +3,7 @@ import job1 from '../assets/Jobs/job1.jpeg';
 import job2 from '../assets/Jobs/job2.jpeg';
 import job3 from '../assets/Servicios/serv3.jpg';
 import job4 from '../assets/Jobs/job4.jpeg';
+import job5 from '../assets/Jobs/job5.jpeg';
 
 export const jobsData = [
     {
@@ -35,6 +36,14 @@ export const jobsData = [
         buttonText: "Texto Boton Trabajo 4",
         buttonLink: "#",
         image: job4,
+        imageAlt: "Descripcion imagen Trabajo 4",
+    },
+    {
+        title: "Trabajo 5",
+        description: "Descripcion Trabajo 4",
+        buttonText: "Texto Boton Trabajo 4",
+        buttonLink: "#",
+        image: job5,
         imageAlt: "Descripcion imagen Trabajo 4",
     },
 ];

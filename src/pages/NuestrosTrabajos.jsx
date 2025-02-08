@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import ContactSection from "../components/ContactSection/ContactSection";
 import { jobsData } from "../data/jobs";
 import SectionType1 from "../components/SectionType1/SectionType1";
-import SectionType2 from "../components/SectionType2/SectionType2";
 
 const NuestrosTrabajos = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,6 +22,7 @@ const NuestrosTrabajos = () => {
       <SectionType1 {...jobsData[1]} />
       <SectionType1 {...jobsData[2]} />
       <SectionType1 {...jobsData[3]} />
+      <SectionType1 {...jobsData[4]} />
       <ContactSection />
     </div>
   );
